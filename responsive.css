@@ -1,0 +1,61 @@
+/* Mobile Header Fix */
+@media (max-width: 768px) {
+    .header .nav-menu {
+        display: none; /* Desktop menu chhupao */
+    }
+
+    .header .mobile-menu-btn {
+        display: block !important; /* Hamburger button dikhao */
+    }
+
+    .navbar {
+        padding: 0.8rem 1rem;
+        justify-content: space-between;
+    }
+}
+
+/* Stats Section Mobile Fix */
+@media (max-width: 768px) {
+    .stats, .stats-flex, .about-stats-container .container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* 2 Column layout */
+        gap: 1.5rem !important;
+        padding: 2rem 1rem !important;
+    }
+
+    .stat-item, .stat-box {
+        padding: 1rem !important;
+        min-width: unset !important;
+    }
+
+    .stat-number, .stat-number-wrapper {
+        font-size: 2rem !important; /* Text size thoda chhota mobile ke liye */
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Hero Text Fix */
+@media (max-width: 768px) {
+    .page-header h1, .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+
+    .page-header p, .hero-content p {
+        font-size: 1rem !important;
+    }
+
+    .section-padding {
+        padding: 3rem 0 !important;
+    }
+}
+
+/* Body padding taaki bottom nav content ko na chhupaye */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 70px; /* Bottom nav ki height jitni jagah */
+    }
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Luxe & Bloom Premium Salon</title>
+    <meta name="description" content="Explore our premium hair, beauty, and spa services at Luxe & Bloom. From traditional Indian treatments to global styling techniques.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918329492479?text=Hi%20Luxe%20%26%20Bloom%20Salon,%20I'd%20like%20to%20book%20a%20service" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Luxe & Bloom</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+        
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#haircut"><i class="fas fa-cut"></i> Hair Services</a></li>
+                            <li><a href="services.html#spa"><i class="fas fa-spa"></i> Spa & Wellness</a></li>
+                            <li><a href="services.html#makeup"><i class="fas fa-magic"></i> Makeup Services</a></li>
+                            <li><a href="services.html#grooming"><i class="fas fa-user-tie"></i> Men's Grooming</a></li>
+                            <li><a href="services.html#treatments"><i class="fas fa-leaf"></i> Indian Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Our Premium Services</h1>
+                <p>Experience the perfect blend of traditional Indian beauty rituals and global styling techniques</p>
+            </div>
+        </div>
+    </section>
+    <!-- Services Filter -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="services-filter">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="hair">Hair Services</button>
+                <button class="filter-btn" data-filter="spa">Spa & Wellness</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="grooming">Grooming</button>
+                <button class="filter-btn" data-filter="indian">Indian Special</button>
+            </div>
+            
+            <!-- Indian Special Treatments -->
+            <div class="indian-special">
+                <h3><i class="fas fa-hands"></i> Traditional Indian Beauty Treatments</h3>
+                <p>Experience our signature Indian beauty rituals that combine ancient wisdom with modern luxury. These exclusive treatments use traditional Ayurvedic ingredients and techniques passed down through generations.</p>
+            </div>
+            
+            <!-- Hair Services -->
+            <div class="service-category" id="haircut">
+                <h2 class="category-title">Hair Services</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Women's Precision Haircut</h3>
+                            <span class="service-price">₹1,200+</span>
+                        </div>
+                        <p>Professional haircut with personalized consultation, luxury shampoo, deep conditioning, and expert styling using premium products.</p>
+                        <span class="service-duration">60-75 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Men's Grooming Haircut</h3>
+                            <span class="service-price">₹800+</span>
+                        </div>
+                        <p>Precision cut with clipper work, hot towel treatment, luxury shampoo, and styling with premium products.</p>
+                        <span class="service-duration">45-60 min</span>
+                    </div>
+                    
+                    <div class="service-item featured" data-category="hair">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="service-item-header">
+                            <h3>Ayurvedic Hair Treatment</h3>
+                            <span class="service-price">₹1,500</span>
+                        </div>
+                        <p>Traditional Indian hair treatment using herbal oils (amla, bhringraj, coconut) for hair growth, scalp health, and natural shine.</p>
+                        <span class="service-duration">90 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Luxury Blowout & Styling</h3>
+                            <span class="service-price">₹1,000+</span>
+                        </div>
+                        <p>Professional blow dry and styling for any occasion using premium heat protectants and finishing products.</p>
+                        <span class="service-duration">60 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hair Coloring -->
+            <div class="service-category" id="coloring">
+                <h2 class="category-title">Hair Coloring</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Single Process Color</h3>
+                            <span class="service-price">₹2,500+</span>
+                        </div>
+                        <p>Full coverage color application with ammonia-free formula, deep conditioning treatment, and gloss finish.</p>
+                        <span class="service-duration">90-120 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Partial Highlights</h3>
+                            <span class="service-price">₹3,200+</span>
+                        </div>
+                        <p>Highlighting the top section and sides of hair for subtle dimension and brightness.</p>
+                        <span class="service-duration">120-150 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Full Highlights</h3>
+                            <span class="service-price">₹4,500+</span>
+                        </div>
+                        <p>Complete highlighting service for full dimensional color and maximum brightness.</p>
+                        <span class="service-duration">150-180 min</span>
+                    </div>
+                    
+                    <div class="service-item featured" data-category="hair">
+                        <div class="featured-badge">Signature Service</div>
+                        <div class="service-item-header">
+                            <h3>Balayage / Ombre</h3>
+                            <span class="service-price">₹5,500+</span>
+                        </div>
+                        <p>Hand-painted highlighting technique for natural-looking, sun-kissed color with seamless blending.</p>
+                        <span class="service-duration">180-210 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Color Correction</h3>
+                            <span class="service-price">₹6,500+</span>
+                        </div>
+                        <p>Expert correction of color mishaps, brassiness, or unwanted tones by our master colorists.</p>
+                        <span class="service-duration">210-240 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="hair">
+                        <div class="service-item-header">
+                            <h3>Root Touch Up</h3>
+                            <span class="service-price">₹1,800+</span>
+                        </div>
+                        <p>Color application to new growth only, matching your existing color perfectly.</p>
+                        <span class="service-duration">60-75 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Spa & Wellness -->
+            <div class="service-category" id="spa">
+                <h2 class="category-title">Spa & Wellness</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Signature Facial</h3>
+                            <span class="service-price">₹2,200</span>
+                        </div>
+                        <p>Deep cleansing, exfoliation, extraction, facial massage, customized mask, and hydration treatment.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                    
+                    <div class="service-item featured" data-category="spa">
+                        <div class="featured-badge">Indian Special</div>
+                        <div class="service-item-header">
+                            <h3>Ayurvedic Shirodhara</h3>
+                            <span class="service-price">₹3,500</span>
+                        </div>
+                        <p>Traditional Ayurvedic therapy with warm herbal oil poured steadily on the forehead for deep relaxation and mental clarity.</p>
+                        <span class="service-duration">90 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Deep Tissue Massage</h3>
+                            <span class="service-price">₹2,800</span>
+                        </div>
+                        <p>Therapeutic massage targeting deep muscle layers to relieve tension and improve mobility.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Relaxation Massage</h3>
+                            <span class="service-price">₹2,500</span>
+                        </div>
+                        <p>Gentle, flowing strokes using aromatic oils to promote relaxation and stress relief.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Body Scrub & Polish</h3>
+                            <span class="service-price">₹2,000</span>
+                        </div>
+                        <p>Exfoliating treatment with natural scrubs to reveal smoother, softer, and radiant skin.</p>
+                        <span class="service-duration">60 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Luxury Manicure</h3>
+                            <span class="service-price">₹900</span>
+                        </div>
+                        <p>Classic manicure with shaping, cuticle care, hand massage, and premium polish application.</p>
+                        <span class="service-duration">60 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-header">
+                            <h3>Luxury Pedicure</h3>
+                            <span class="service-price">₹1,500</span>
+                        </div>
+                        <p>Relaxing pedicure with aromatic soak, scrub, foot massage, callus treatment, and polish.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Makeup -->
+            <div class="service-category" id="makeup">
+                <h2 class="category-title">Makeup Services</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="makeup">
+                        <div class="service-item-header">
+                            <h3>Bridal Makeup Trial</h3>
+                            <span class="service-price">₹3,500</span>
+                        </div>
+                        <p>Detailed consultation and trial run for your wedding day look, including product testing and photography.</p>
+                        <span class="service-duration">120 min</span>
+                    </div>
+                    
+                    <div class="service-item featured" data-category="makeup">
+                        <div class="featured-badge">Bridal Special</div>
+                        <div class="service-item-header">
+                            <h3>Wedding Day Makeup</h3>
+                            <span class="service-price">₹8,500+</span>
+                        </div>
+                        <p>Complete bridal makeup application on your wedding day with touch-up kit and on-site support available.</p>
+                        <span class="service-duration">90-120 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="makeup">
+                        <div class="service-item-header">
+                            <h3>Indian Bridal Makeup</h3>
+                            <span class="service-price">₹12,000+</span>
+                        </div>
+                        <p>Traditional Indian bridal makeup with intricate bindi, eye detailing, and long-lasting waterproof formulas.</p>
+                        <span class="service-duration">120-150 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="makeup">
+                        <div class="service-item-header">
+                            <h3>Special Occasion</h3>
+                            <span class="service-price">₹2,500</span>
+                        </div>
+                        <p>Makeup for parties, proms, photoshoots, and events with customized look based on your outfit and preference.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="makeup">
+                        <div class="service-item-header">
+                            <h3>Airbrush Makeup</h3>
+                            <span class="service-price">₹3,200</span>
+                        </div>
+                        <p>Flawless, long-lasting makeup application using airbrush technique for photography and special events.</p>
+                        <span class="service-duration">90 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="makeup">
+                        <div class="service-item-header">
+                            <h3>Makeup Lesson</h3>
+                            <span class="service-price">₹3,800</span>
+                        </div>
+                        <p>One-on-one instruction on application techniques, product selection, and personalized makeup routine.</p>
+                        <span class="service-duration">120 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grooming -->
+            <div class="service-category" id="grooming">
+                <h2 class="category-title">Men's Grooming</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="grooming">
+                        <div class="service-item-header">
+                            <h3>Classic Straight Razor Shave</h3>
+                            <span class="service-price">₹1,200</span>
+                        </div>
+                        <p>Traditional straight razor shave with hot towels, pre-shave oil, soothing balm, and aftercare.</p>
+                        <span class="service-duration">45 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="grooming">
+                        <div class="service-item-header">
+                            <h3>Beard Trim & Shape</h3>
+                            <span class="service-price">₹800</span>
+                        </div>
+                        <p>Precision beard trimming and shaping with detailing, conditioning treatment, and styling products.</p>
+                        <span class="service-duration">45 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="grooming">
+                        <div class="service-item-header">
+                            <h3>Hot Towel Treatment</h3>
+                            <span class="service-price">₹600</span>
+                        </div>
+                        <p>Steaming hot towels to open pores followed by cooling treatment and refreshing mist.</p>
+                        <span class="service-duration">30 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="grooming">
+                        <div class="service-item-header">
+                            <h3>Men's Luxury Facial</h3>
+                            <span class="service-price">₹2,200</span>
+                        </div>
+                        <p>Deep cleansing and treatment tailored for men's skin, addressing shaving irritation and oil control.</p>
+                        <span class="service-duration">75 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Treatments -->
+            <div class="service-category" id="treatments">
+                <h2 class="category-title">Special Treatments</h2>
+                <div class="services-list">
+                    <div class="service-item" data-category="special">
+                        <div class="service-item-header">
+                            <h3>Keratin Smoothing Treatment</h3>
+                            <span class="service-price">₹8,000+</span>
+                        </div>
+                        <p>Smoothing treatment that reduces frizz, adds shine, and makes hair more manageable for up to 3 months.</p>
+                        <span class="service-duration">180-240 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="special">
+                        <div class="service-item-header">
+                            <h3>Hair Extensions</h3>
+                            <span class="service-price">₹15,000+</span>
+                        </div>
+                        <p>Professional application of 100% human hair extensions using tape-in, clip-in, or fusion methods.</p>
+                        <span class="service-duration">180-300 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="special">
+                        <div class="service-item-header">
+                            <h3>Scalp Detox Treatment</h3>
+                            <span class="service-price">₹1,800</span>
+                        </div>
+                        <p>Therapeutic treatment for dry, itchy, or flaky scalp using medicated and herbal solutions.</p>
+                        <span class="service-duration">60 min</span>
+                    </div>
+                    
+                    <div class="service-item featured" data-category="special">
+                        <div class="featured-badge">Complete Package</div>
+                        <div class="service-item-header">
+                            <h3>Bridal Package</h3>
+                            <span class="service-price">₹25,000+</span>
+                        </div>
+                        <p>Complete bridal package including trial, hair, makeup, mehndi artist coordination, and on-site support.</p>
+                        <span class="service-duration">Custom</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="special indian">
+                        <div class="service-item-header">
+                            <h3>Mehndi (Henna) Application</h3>
+                            <span class="service-price">₹2,500+</span>
+                        </div>
+                        <p>Traditional Indian henna application for hands and feet with intricate designs for weddings and festivals.</p>
+                        <span class="service-duration">60-120 min</span>
+                    </div>
+                    
+                    <div class="service-item" data-category="special indian">
+                        <div class="service-item-header">
+                            <h3>Threading & Eyebrow Shaping</h3>
+                            <span class="service-price">₹300+</span>
+                        </div>
+                        <p>Traditional Indian threading technique for precise eyebrow shaping and facial hair removal.</p>
+                        <span class="service-duration">15-30 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Ready for Your Transformation?</h2>
+            <p class="section-subtitle">Book your appointment today and experience the Luxe & Bloom difference</p>
+            <div class="hero-buttons">
+                <a href="book.html" class="btn btn-primary">Book Now</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Luxe & Bloom</div>
+                    <p>Premium unisex salon blending Indian beauty heritage with global luxury standards. Experience the fusion of tradition and innovation.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Bandra West, Mumbai</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 8329492479</p>
+                    <p><i class="fas fa-envelope"></i> info@luxeandbloom.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8329492479</p>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p><span>Mon - Sat:</span> <span>9am - 9pm</span></p>
+                    <p><span>Sunday:</span> <span>10am - 7pm</span></p>
+                    <p><span>Festivals:</span> <span>Special Hours</span></p>
+                    <p><span>Bridal Appointments:</span> <span>24/7 Available</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+    <p>&copy; 2023 Luxe & Bloom Premium Salon. All rights reserved. | 
+        Designed with <i class="fas fa-heart" style="color: var(--primary-gold);"></i> by 
+        <a href="https://meraj8329.pythonanywhere.com/" target="_blank" style="color: var(--primary-gold); font-weight: 600; text-decoration: none;">meraj.dev</a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item">
+        <i class="fas fa-spa"></i>
+        <span>Services</span>
+    </a>
+    
+    <a href="book.html" class="nav-item book-special">
+        <div class="inner-circle">
+            <i class="fas fa-calendar-check"></i>
+        </div>
+        <span>Book</span>
+    </a>
+
+    <a href="gallery.html" class="nav-item">
+        <i class="fas fa-images"></i>
+        <span>Gallery</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+    </a>
+</div>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+    <script src="mobile-nav.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+   
+</body>
+</html>

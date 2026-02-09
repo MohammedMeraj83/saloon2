@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe & Bloom | Premium Unisex Salon</title>
+    <meta name="description" content="Experience luxury beauty services at Luxe & Bloom, the premier unisex salon offering haircuts, styling, coloring, skincare, and spa treatments.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    
+     
+    <!-- <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/scissors.png"> -->
+</head>
+<body>
+
+    <div id="preloader">
+    <div class="loader-content">
+        <i class="fas fa-spa gold-icon"></i>
+        <h2 class="loader-logo">Luxe & Bloom</h2>
+        <div class="loader-bar"></div>
+    </div>
+</div>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Luxe & Bloom</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+        
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#haircut"><i class="fas fa-cut"></i> Hair Services</a></li>
+                            <li><a href="services.html#spa"><i class="fas fa-spa"></i> Spa & Wellness</a></li>
+                            <li><a href="services.html#makeup"><i class="fas fa-magic"></i> Makeup Services</a></li>
+                            <li><a href="services.html#grooming"><i class="fas fa-user-tie"></i> Men's Grooming</a></li>
+                            <li><a href="services.html#treatments"><i class="fas fa-leaf"></i> Indian Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#haircut"><i class="fas fa-cut"></i> Hair Services</a></li>
+                            <li><a href="services.html#spa"><i class="fas fa-spa"></i> Spa & Wellness</a></li>
+                            <li><a href="services.html#makeup"><i class="fas fa-magic"></i> Makeup Services</a></li>
+                            <li><a href="services.html#grooming"><i class="fas fa-user-tie"></i> Men's Grooming</a></li>
+                            <li><a href="services.html#treatments"><i class="fas fa-leaf"></i> Indian Special</a></li>
+                        </ul>
+                    </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Elevate Your Beauty Experience</h1>
+                <p>Discover the art of premium grooming at Luxe & Bloom, where luxury meets expertise. Our award-winning stylists provide personalized services in a serene, upscale environment.</p>
+                <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+                    <a href="book.html" class="btn">Book Appointment</a>
+                    <a href="services.html" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-down">
+    <div class="mouse"></div>
+</div>
+
+    <!-- Services Highlights -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Signature Services</h2>
+                <p>Indulge in our expertly crafted beauty and grooming treatments designed to enhance your natural beauty.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in-up">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair Styling">
+                    </div>
+                    <div class="service-info">
+                        <h3>Hair Styling & Cutting</h3>
+                        <div class="service-meta">
+                            <span class="service-price">From $75</span>
+                            <span class="service-duration">60 min</span>
+                        </div>
+                        <p class="service-description">Personalized haircuts and styling from our master stylists using premium products.</p>
+                        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-aos="zoom-in-up">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair Coloring">
+                    </div>
+                    <div class="service-info">
+                        <h3>Hair Coloring</h3>
+                        <div class="service-meta">
+                            <span class="service-price">From $120</span>
+                            <span class="service-duration">90 min</span>
+                        </div>
+                        <p class="service-description">Custom color formulation and application with ammonia-free, conditioning colors.</p>
+                        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+               <div class="service-card" data-aos="zoom-in-up">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Skincare">
+                    </div>
+                    <div class="service-info">
+                        <h3>Facials & Skincare</h3>
+                        <div class="service-meta">
+                            <span class="service-price">From $95</span>
+                            <span class="service-duration">75 min</span>
+                        </div>
+                        <p class="service-description">Luxurious facials using medical-grade products for radiant, healthy-looking skin.</p>
+                        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="services.html" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers" style="background-color: var(--primary-beige);" data-aos="fade-up">
+    <div class="container">
+        <div class="section-header">
+            <h2>Special Offers</h2>
+            <p>Take advantage of our exclusive promotions and seasonal packages.</p>
+        </div>
+        
+        <div class="offers-flex-container">
+            
+            <div class="offer-card-item" data-aos="zoom-in-up">
+                <div class="offer-card-content">
+                    <div class="offer-title-row">
+                        <h3>First Visit</h3>
+                        <span class="price-badge">20% OFF</span>
+                    </div>
+                    <p class="offer-text">New clients receive 20% off their first service. Experience our premium salon at a special introductory rate.</p>
+                    <a href="book.html" class="btn btn-block">Book Now</a>
+                </div>
+            </div>
+            
+            <div class="offer-card-item" data-aos="zoom-in-up" data-aos-delay="100">
+                <div class="offer-card-content">
+                    <div class="offer-title-row">
+                        <h3>Couples</h3>
+                        <span class="price-badge">₹4,999</span>
+                    </div>
+                    <p class="offer-text">Enjoy a couple's grooming session with haircuts, styling, and complimentary refreshments for two.</p>
+                    <a href="book.html" class="btn btn-block">Book Now</a>
+                </div>
+            </div>
+            
+            <div class="offer-card-item" data-aos="zoom-in-up" data-aos-delay="200">
+                <div class="offer-card-content">
+                    <div class="offer-title-row">
+                        <h3>Monthly</h3>
+                        <span class="price-badge">₹2,999/mo</span>
+                    </div>
+                    <p class="offer-text">Unlimited haircuts, 15% off all other services, and priority booking with our premium membership.</p>
+                    <a href="contact.html" class="btn btn-block">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="stats-bar" style="background: var(--black); color: #fff; padding: 4rem 0;">
+    <div class="container stats-grid">
+        <div class="stat-item" data-aos="fade-up">
+            <h2 style="color: var(--primary-gold);">10+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="color: var(--primary-gold);">5000+</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <h2 style="color: var(--primary-gold);">15+</h2>
+            <p>Master Stylists</p>
+        </div>
+    </div>
+</section>
+
+    <section class="brands-section" style="padding: 3rem 0; background: #fff;">
+    <div class="container">
+        <h4 style="text-align: center; margin-bottom: 2rem; color: var(--text-light); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Premium Brands We Use</h4>
+        <div class="brands-grid" data-aos="fade-up">
+            <div class="brand-item">L'ORÉAL</div>
+            <div class="brand-item">OLAPLEX</div>
+            <div class="brand-item">DYSON</div>
+            <div class="brand-item">KERASTASE</div>
+            <div class="brand-item">MAC</div>
+        </div>
+    </div>
+</section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>Discover why our clients keep coming back to Luxe & Bloom.</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="flip-left">
+                    <p class="testimonial-text">"I've been to many salons, but Luxe & Bloom is exceptional. My stylist truly listened to what I wanted and delivered beyond my expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah M.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Client for 3 years</p>
+                        </div>
+                    </div>
+                </div>
+                
+               <div class="testimonial-card" data-aos="flip-left">
+                    <p class="testimonial-text">"The ambiance is so relaxing, and the staff are true professionals. My haircut always looks impeccable and grows out beautifully."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="James R.">
+                        </div>
+                        <div class="author-info">
+                            <h4>James R.</h4>
+                            <p>Client for 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="flip-left">
+                    <p class="testimonial-text">"As a busy professional, I appreciate their attention to detail and punctuality. The facial treatments have completely transformed my skin."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Priya K.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya K.</h4>
+                            <p>Client for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <p>Take a look at our work and luxurious salon environment.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="flip-right data-category="hair">
+                    <img src="https://images.unsplash.com/photo-1560851248-7a2a48efb433?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hair Styling">
+                    <div class="gallery-overlay">
+                        <h4>Hair Transformation</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="spa">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spa Treatment">
+                    <div class="gallery-overlay">
+                        <h4>Luxury Spa</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="salon">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <h4>Salon Interior</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="beauty">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Facial Treatment">
+                    <div class="gallery-overlay">
+                        <h4>Skincare</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="gallery.html" class="btn">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+   <section class="location" style="background-color: var(--primary-beige);" data-aos="fade-up">
+    <div class="container">
+        <div class="section-header" data-aos="zoom-in">
+            <h2>Visit Our Salon</h2>
+            <p>Conveniently located in Bandra with ample parking available.</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                <h3>Our Location</h3>
+                <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Luxe & Bloom, Bandra West<br>Linking Road, Mumbai, MH 400050</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Mon - Sat: 10am - 9pm<br>Sunday: 11am - 7pm</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Contact</h4>
+                        <p>Phone: +91 8329492479<br>Email: hello@luxeandbloom.in</p>
+                    </div>
+                </div>
+                
+                <a href="https://goo.gl/maps/xyz" target="_blank" class="btn" data-aos="zoom-in" data-aos-delay="600">Get Directions</a>
+            </div>
+            
+            <div class="map-container" data-aos="fade-left" data-aos-delay="400" style="height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.218556623696!2d72.82987327520474!3d19.05417248214736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93e50669145%3A0xc6651917f16819d!2sLinking%20Rd%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="instagram-feed" data-aos="fade-up">
+    <div class="container">
+        <div class="section-header">
+            <h2>Follow Us @LuxeAndBloom</h2>
+        </div>
+        <div class="insta-grid">
+            <div class="insta-item"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400" alt="Insta 1"></div>
+            <div class="insta-item"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400" alt="Insta 2"></div>
+            <div class="insta-item"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400" alt="Insta 3"></div>
+            <div class="insta-item"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400" alt="Insta 4"></div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-secondary"><i class="fab fa-instagram"></i> View on Instagram</a>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Luxe & Bloom</div>
+                    <p>Premium unisex salon offering luxury hair, skin, and beauty services in an elegant, relaxing environment. Experience the art of fine grooming.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Beverly Hills, CA</p>
+                    <p><i class="fas fa-phone-alt"></i> (310) 555-LUXE</p>
+                    <p><i class="fas fa-envelope"></i> info@luxeandbloom.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +1 (310) 555-1234</p>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p><span>Mon - Fri:</span> <span>9am - 8pm</span></p>
+                    <p><span>Saturday:</span> <span>9am - 6pm</span></p>
+                    <p><span>Sunday:</span> <span>10am - 4pm</span></p>
+                    <p><span>Holidays:</span> <span>By Appointment</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+    <p>&copy; 2023 Luxe & Bloom Premium Salon. All rights reserved. | 
+        Designed with <i class="fas fa-heart" style="color: var(--primary-gold);"></i> by 
+        <a href="https://meraj8329.pythonanywhere.com/" target="_blank" style="color: var(--primary-gold); font-weight: 600; text-decoration: none;">meraj.dev</a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918329492479" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item">
+        <i class="fas fa-spa"></i>
+        <span>Services</span>
+    </a>
+    
+    <a href="book.html" class="nav-item book-special">
+        <div class="inner-circle">
+            <i class="fas fa-calendar-check"></i>
+        </div>
+        <span>Book</span>
+    </a>
+
+    <a href="gallery.html" class="nav-item">
+        <i class="fas fa-images"></i>
+        <span>Gallery</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+    </a>
+</div>
+
+</div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="mobile-nav.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Isse animation start ho jayegi
+  AOS.init({
+    duration: 1000, // 1 second ki animation
+    once: true,     // Sirf ek baar chalegi jab scroll karoge
+    offset: 100     // Thoda scroll karne ke baad start hoga
+  });
+</script>
+</body>
+</html>

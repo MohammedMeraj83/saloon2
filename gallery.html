@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Luxe & Bloom Premium Salon</title>
+    <meta name="description" content="Explore our stunning gallery of Indian bridal makeup, traditional treatments, hair transformations, and luxury salon experiences at Luxe & Bloom.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* Additional styles for gallery page */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+        
+        .page-header {
+            padding: 10rem 0 5rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(212, 175, 55, 0.1) 100%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .page-header p {
+            color: var(--light-gold);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .bg-light {
+            background-color: var(--primary-beige);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+            animation: expand 1s ease 0.8s both;
+        }
+        
+        @keyframes expand {
+            from { width: 0; }
+            to { width: 60px; }
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Gallery Filter */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--dark-beige);
+            opacity: 0;
+            animation: fadeIn 1s ease 0.7s forwards;
+        }
+        
+        .filter-btn {
+            padding: 0.8rem 1.8rem;
+            background-color: var(--white);
+            border: 2px solid var(--dark-beige);
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: var(--primary-gold);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 1;
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary-gold);
+            border-color: var(--primary-gold);
+            color: var(--white);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .filter-btn.active::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .filter-btn span {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Gallery Grid */
+        .gallery-container {
+            position: relative;
+            min-height: 800px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.9s forwards;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 350px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            opacity: 0;
+            transform: translateY(30px) rotateX(10deg);
+            animation: galleryItemAppear 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        @keyframes galleryItemAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0) rotateX(0);
+            }
+        }
+        
+        /* Stagger animation for items */
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.7s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.8s; }
+        .gallery-item:nth-child(9) { animation-delay: 0.9s; }
+        .gallery-item:nth-child(10) { animation-delay: 1s; }
+        .gallery-item:nth-child(11) { animation-delay: 1.1s; }
+        .gallery-item:nth-child(12) { animation-delay: 1.2s; }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.15) rotate(1deg);
+            filter: brightness(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.9) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-caption {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transform: translateY(10px);
+            transition: transform 0.4s 0.1s;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-category {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(10px);
+            transition: transform 0.4s 0.2s;
+        }
+        
+        .gallery-item:hover .gallery-category {
+            transform: translateY(0);
+        }
+        
+        .gallery-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 3;
+        }
+        
+        .gallery-item:hover .gallery-icon {
+            transform: translate(-50%, -50%) scale(1);
+            animation: iconPulse 2s infinite;
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+            50% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+        }
+        
+        /* Transformation Section */
+        .transformations-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .transformations-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1) 0%, transparent 50%, rgba(212, 175, 55, 0.1) 100%);
+            animation: gradientMove 15s linear infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Before/After Gallery */
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 1s forwards;
+        }
+        
+        .before-after-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .ba-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .ba-before {
+            width: 50%;
+            z-index: 2;
+            clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .ba-after {
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .before-after-item:hover .ba-before {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            width: 100%;
+        }
+        
+        .ba-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 0.5rem 1.5rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-weight: 600;
+            z-index: 3;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .ba-before-label {
+            left: 20px;
+            border-left: 3px solid var(--primary-gold);
+        }
+        
+        .ba-after-label {
+            right: 20px;
+            border-right: 3px solid var(--primary-gold);
+        }
+        
+        .before-after-item:hover .ba-label {
+            background-color: rgba(212, 175, 55, 0.9);
+        }
+        
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+            animation: lightboxFadeIn 0.3s ease;
+        }
+        
+        @keyframes lightboxFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            transform: scale(0.9);
+            animation: lightboxScale 0.3s ease 0.1s forwards;
+        }
+        
+        @keyframes lightboxScale {
+            to { transform: scale(1); }
+        }
+        
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .lightbox-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            color: var(--primary-gold);
+            transform: rotate(90deg);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox-nav button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .lightbox-nav button:hover {
+            background: rgba(212, 175, 55, 0.8);
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .before-after-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .gallery-item {
+                height: 300px;
+            }
+            
+            .filter-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .before-after-item {
+                height: 350px;
+            }
+            
+            .whatsapp-float {
+                bottom: 80px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 280px;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .lightbox-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918329492479?text=Hi%20Luxe%20%26%20Bloom%20Salon,%20I'd%20like%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Luxe & Bloom</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+        
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#haircut"><i class="fas fa-cut"></i> Hair Services</a></li>
+                            <li><a href="services.html#spa"><i class="fas fa-spa"></i> Spa & Wellness</a></li>
+                            <li><a href="services.html#makeup"><i class="fas fa-magic"></i> Makeup Services</a></li>
+                            <li><a href="services.html#grooming"><i class="fas fa-user-tie"></i> Men's Grooming</a></li>
+                            <li><a href="services.html#treatments"><i class="fas fa-leaf"></i> Indian Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Our Gallery</h1>
+                <p>Witness the artistry of Indian beauty traditions blended with global luxury. Explore our stunning transformations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <span>All</span>
+                </button>
+                <button class="filter-btn" data-filter="bridal">
+                    <span>Indian Bridal</span>
+                </button>
+                <button class="filter-btn" data-filter="hair">
+                    <span>Hair Services</span>
+                </button>
+                <button class="filter-btn" data-filter="makeup">
+                    <span>Makeup Artistry</span>
+                </button>
+                <button class="filter-btn" data-filter="ayurvedic">
+                    <span>Ayurvedic</span>
+                </button>
+                <button class="filter-btn" data-filter="salon">
+                    <span>Salon</span>
+                </button>
+                <button class="filter-btn" data-filter="mehndi">
+                    <span>Mehndi Art</span>
+                </button>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-grid">
+                    <!-- Indian Bridal Images -->
+                    <div class="gallery-item" data-category="bridal">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Traditional Indian Bridal Look</h3>
+                            <span class="gallery-category">Bridal Makeup</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="bridal">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">South Indian Bridal Hair & Jewelry</h3>
+                            <span class="gallery-category">Bridal Styling</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Hair Services -->
+                    <div class="gallery-item" data-category="hair">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1560851248-7a2a48efb433?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Balayage on Indian Hair</h3>
+                            <span class="gallery-category">Hair Coloring</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="hair">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Precision Haircut & Styling</h3>
+                            <span class="gallery-category">Hair Cutting</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Makeup Artistry -->
+                    <div class="gallery-item" data-category="makeup">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Evening Makeup Look</h3>
+                            <span class="gallery-category">Makeup</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="makeup">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=1935&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Editorial Makeup Artistry</h3>
+                            <span class="gallery-category">Makeup</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Ayurvedic Treatments -->
+                    <div class="gallery-item" data-category="ayurvedic">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Ayurvedic Head Massage</h3>
+                            <span class="gallery-category">Ayurvedic</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="ayurvedic">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Herbal Facial Treatment</h3>
+                            <span class="gallery-category">Ayurvedic</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Salon Interior -->
+                    <div class="gallery-item" data-category="salon">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Luxury Salon Interior</h3>
+                            <span class="gallery-category">Salon</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="salon">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Stylist Workspace</h3>
+                            <span class="gallery-category">Salon</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Mehndi Art -->
+                    <div class="gallery-item" data-category="mehndi">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1594736797933-d0401ba94693?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Intricate Mehndi Design</h3>
+                            <span class="gallery-category">Mehndi Art</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="mehndi">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Bridal Mehndi Application</h3>
+                            <span class="gallery-category">Mehndi Art</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- More Images -->
+                    <div class="gallery-item" data-category="hair">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Long Hair Styling</h3>
+                            <span class="gallery-category">Hair Styling</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="makeup">
+                        <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-caption">Professional Makeup Session</h3>
+                            <span class="gallery-category">Makeup</span>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="section-padding transformations-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Amazing Transformations</h2>
+                <p class="section-subtitle">Witness the stunning before and after results of our premium services</p>
+            </div>
+            
+            <div class="before-after-grid">
+                <div class="before-after-item">
+                    <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1596703923338-48f1c07e4f2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');"></div>
+                    <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1560851248-7a2a48efb433?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');"></div>
+                    <div class="ba-label ba-before-label">Before</div>
+                    <div class="ba-label ba-after-label">After</div>
+                </div>
+                
+                <div class="before-after-item">
+                    <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80');"></div>
+                    <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');"></div>
+                    <div class="ba-label ba-before-label">Before</div>
+                    <div class="ba-label ba-after-label">After</div>
+                </div>
+                
+                <div class="before-after-item">
+                    <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80');"></div>
+                    <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1935&q=80');"></div>
+                    <div class="ba-label ba-before-label">Before</div>
+                    <div class="ba-label ba-after-label">After</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-nav">
+            <button id="lightboxPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="lightboxNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle">Image Title</h3>
+                <p id="lightboxCategory">Category</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Luxe & Bloom</div>
+                    <p>Premium unisex salon blending Indian beauty heritage with global luxury standards. Experience the fusion of tradition and innovation.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Bandra West, Mumbai</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 8329492479</p>
+                    <p><i class="fas fa-envelope"></i> info@luxeandbloom.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8329492479</p>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p><span>Mon - Sat:</span> <span>9am - 9pm</span></p>
+                    <p><span>Sunday:</span> <span>10am - 7pm</span></p>
+                    <p><span>Festivals:</span> <span>Special Hours</span></p>
+                    <p><span>Bridal Appointments:</span> <span>24/7 Available</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+    <p>&copy; 2023 Luxe & Bloom Premium Salon. All rights reserved. | 
+        Designed with <i class="fas fa-heart" style="color: var(--primary-gold);"></i> by 
+        <a href="https://meraj8329.pythonanywhere.com/" target="_blank" style="color: var(--primary-gold); font-weight: 600; text-decoration: none;">meraj.dev</a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+ <div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item">
+        <i class="fas fa-spa"></i>
+        <span>Services</span>
+    </a>
+    
+    <a href="book.html" class="nav-item book-special">
+        <div class="inner-circle">
+            <i class="fas fa-calendar-check"></i>
+        </div>
+        <span>Book</span>
+    </a>
+
+    <a href="gallery.html" class="nav-item">
+        <i class="fas fa-images"></i>
+        <span>Gallery</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+    </a>
+</div>
+    <script src="script.js"></script>
+    <script src="mobile-nav.js"></script>
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            let currentFilter = 'all';
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    currentFilter = this.getAttribute('data-filter');
+                    
+                    // Animate gallery items based on filter
+                    galleryItems.forEach((item, index) => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        if (currentFilter === 'all' || itemCategory === currentFilter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0) rotateX(0)';
+                            }, index * 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(30px) rotateX(10deg)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Lightbox functionality
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxCategory = document.getElementById('lightboxCategory');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+            
+            const galleryImages = Array.from(document.querySelectorAll('.gallery-item'));
+            let currentImageIndex = 0;
+            
+            // Open lightbox when gallery item is clicked
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const imgUrl = this.querySelector('.gallery-img').style.backgroundImage
+                        .replace('url("', '').replace('")', '');
+                    const title = this.querySelector('.gallery-caption').textContent;
+                    const category = this.querySelector('.gallery-category').textContent;
+                    
+                    currentImageIndex = index;
+                    openLightbox(imgUrl, title, category);
+                });
+            });
+            
+            function openLightbox(imgUrl, title, category) {
+                lightboxImage.src = imgUrl;
+                lightboxTitle.textContent = title;
+                lightboxCategory.textContent = category;
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeLightbox() {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                const nextItem = galleryImages[currentImageIndex];
+                const imgUrl = nextItem.querySelector('.gallery-img').style.backgroundImage
+                    .replace('url("', '').replace('")', '');
+                const title = nextItem.querySelector('.gallery-caption').textContent;
+                const category = nextItem.querySelector('.gallery-category').textContent;
+                
+                lightboxImage.style.opacity = '0';
+                setTimeout(() => {
+                    lightboxImage.src = imgUrl;
+                    lightboxTitle.textContent = title;
+                    lightboxCategory.textContent = category;
+                    lightboxImage.style.opacity = '1';
+                }, 300);
+            }
+            
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                const prevItem = galleryImages[currentImageIndex];
+                const imgUrl = prevItem.querySelector('.gallery-img').style.backgroundImage
+                    .replace('url("', '').replace('")', '');
+                const title = prevItem.querySelector('.gallery-caption').textContent;
+                const category = prevItem.querySelector('.gallery-category').textContent;
+                
+                lightboxImage.style.opacity = '0';
+                setTimeout(() => {
+                    lightboxImage.src = imgUrl;
+                    lightboxTitle.textContent = title;
+                    lightboxCategory.textContent = category;
+                    lightboxImage.style.opacity = '1';
+                }, 300);
+            }
+            
+            // Event listeners for lightbox controls
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', showPrevImage);
+            lightboxNext.addEventListener('click', showNextImage);
+            
+            // Close lightbox when clicking outside the image
+            lightboxModal.addEventListener('click', function(e) {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation for lightbox
+            document.addEventListener('keydown', function(e) {
+                if (!lightboxModal.classList.contains('active')) return;
+                
+                switch(e.key) {
+                    case 'Escape':
+                        closeLightbox();
+                        break;
+                    case 'ArrowRight':
+                        showNextImage();
+                        break;
+                    case 'ArrowLeft':
+                        showPrevImage();
+                        break;
+                }
+            });
+            
+            // Before/After hover effect enhancement
+            const baItems = document.querySelectorAll('.before-after-item');
+            baItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

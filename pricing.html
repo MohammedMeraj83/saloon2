@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages | Luxe & Bloom Premium Salon</title>
+    <meta name="description" content="View our complete price list and exclusive packages for traditional Indian and global beauty services at Luxe & Bloom.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* Additional styles for pricing page */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+        
+        .page-header {
+            padding: 10rem 0 5rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .page-header p {
+            color: var(--light-gold);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .bg-light {
+            background-color: var(--primary-beige);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Tables */
+        .pricing-tables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            border: 2px solid transparent;
+            animation: cardSlide 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes cardSlide {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--light-gold);
+        }
+        
+        .pricing-card.offer-highlight {
+            border-color: var(--primary-gold);
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        
+        .pricing-card.offer-highlight:hover {
+            transform: scale(1.05) translateY(-15px);
+        }
+        
+        .pricing-header {
+            padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--light-gold), var(--primary-beige));
+            text-align: center;
+            position: relative;
+        }
+        
+        .offer-highlight .pricing-header {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: white;
+        }
+        
+        .offer-highlight .pricing-header h3,
+        .offer-highlight .pricing-header p {
+            color: white;
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-gold);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        .pricing-price {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+        
+        .pricing-price span {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        .pricing-period {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: -1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-features {
+            padding: 0 2rem;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--dark-beige);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-features li:hover {
+            color: var(--text-dark);
+            padding-left: 5px;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .feature-price {
+            background-color: var(--primary-beige);
+            color: var(--primary-gold);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .pricing-footer {
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-gold);
+            color: var(--white);
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Price Tables */
+        .category-title {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 0.8rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            animation: fadeIn 1s ease;
+        }
+        
+        .price-table thead {
+            background-color: var(--primary-gold);
+            color: white;
+        }
+        
+        .price-table th {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .price-table tbody tr {
+            border-bottom: 1px solid var(--dark-beige);
+            transition: all 0.3s ease;
+        }
+        
+        .price-table tbody tr:hover {
+            background-color: var(--primary-beige);
+            transform: translateX(5px);
+        }
+        
+        .price-table td {
+            padding: 1.2rem 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .price-table td:first-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+        
+        /* Indian Special Note */
+        .indian-note {
+            background: linear-gradient(135deg, var(--light-gold), var(--primary-beige));
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 5px solid var(--primary-gold);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .indian-note h3 {
+            color: var(--dark-gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .indian-note h3 i {
+            font-size: 1.5rem;
+        }
+        
+        /* Savings Calculator */
+        .savings-calc {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .savings-calc h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        
+        .savings-amount {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .pricing-card.offer-highlight {
+                transform: none;
+            }
+            
+            .pricing-card.offer-highlight:hover {
+                transform: translateY(-15px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.7rem;
+            }
+            
+            .pricing-tables {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .pricing-price {
+                font-size: 3rem;
+            }
+            
+            .price-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .price-table th,
+            .price-table td {
+                padding: 1rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 80px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-features li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .feature-price {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918329492479?text=Hi%20Luxe%20%26%20Bloom%20Salon,%20I'd%20like%20to%20inquire%20about%20pricing" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Luxe & Bloom</span>
+            </a>
+            
+           <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+        
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#haircut"><i class="fas fa-cut"></i> Hair Services</a></li>
+                            <li><a href="services.html#spa"><i class="fas fa-spa"></i> Spa & Wellness</a></li>
+                            <li><a href="services.html#makeup"><i class="fas fa-magic"></i> Makeup Services</a></li>
+                            <li><a href="services.html#grooming"><i class="fas fa-user-tie"></i> Men's Grooming</a></li>
+                            <li><a href="services.html#treatments"><i class="fas fa-leaf"></i> Indian Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Pricing & Packages</h1>
+                <p>Premium beauty services with transparent Indian pricing. Experience luxury that fits your budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indian Special Note -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="indian-note">
+                <h3><i class="fas fa-rupee-sign"></i> Indian Pricing Transparency</h3>
+                <p>All prices are in Indian Rupees (₹) and include GST. We offer traditional Indian treatments alongside global services. Bridal packages can be customized according to regional traditions and requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Special Packages</h2>
+                <p class="section-subtitle">Save with our curated packages for weddings, festivals, and special occasions</p>
+            </div>
+            
+            <div class="pricing-tables">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Indian Bridal Package</h3>
+                        <p>Complete bridal makeover for your special day</p>
+                    </div>
+                    <div class="pricing-price">₹35,000</div>
+                    <p class="pricing-period">Complete Traditional Package</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Bridal Hair Trial <span class="feature-price">₹3,500 value</span></li>
+                            <li>Bridal Makeup Trial <span class="feature-price">₹3,500 value</span></li>
+                            <li>Wedding Day Hair <span class="feature-price">₹8,500 value</span></li>
+                            <li>Wedding Day Makeup <span class="feature-price">₹12,000 value</span></li>
+                            <li>Mehndi Artist Coordination <span class="feature-price">₹5,000 value</span></li>
+                            <li>Pre-wedding Skin Care <span class="feature-price">₹6,000 value</span></li>
+                            <li><strong>Total Value: ₹38,500</strong></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Book Package</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card offer-highlight">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Complete Grooming</h3>
+                        <p>For the modern Indian gentleman</p>
+                    </div>
+                    <div class="pricing-price">₹5,500</div>
+                    <p class="pricing-period">Premium Grooming Package</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Men's Haircut <span class="feature-price">₹800 value</span></li>
+                            <li>Classic Straight Razor Shave <span class="feature-price">₹1,200 value</span></li>
+                            <li>Beard Trim & Shape <span class="feature-price">₹800 value</span></li>
+                            <li>Men's Luxury Facial <span class="feature-price">₹2,200 value</span></li>
+                            <li>Hot Towel Treatment <span class="feature-price">₹600 value</span></li>
+                            <li>Traditional Head Massage <span class="feature-price">₹1,500 value</span></li>
+                            <li><strong>Total Value: ₹7,100</strong></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Book Package</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Ayurvedic Spa Day</h3>
+                        <p>Traditional Indian relaxation experience</p>
+                    </div>
+                    <div class="pricing-price">₹8,500</div>
+                    <p class="pricing-period">Complete Wellness Package</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Ayurvedic Shirodhara <span class="feature-price">₹3,500 value</span></li>
+                            <li>Signature Facial <span class="feature-price">₹2,200 value</span></li>
+                            <li>Relaxation Massage <span class="feature-price">₹2,500 value</span></li>
+                            <li>Body Scrub & Polish <span class="feature-price">₹2,000 value</span></li>
+                            <li>Herbal Tea & Ayurvedic Snacks <span class="feature-price">₹500 value</span></li>
+                            <li><strong>Total Value: ₹10,700</strong></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Book Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Membership Plans</h2>
+                <p class="section-subtitle">Exclusive monthly memberships for regular clients with premium benefits</p>
+            </div>
+            
+            <div class="pricing-tables">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Bloom Lite</h3>
+                        <p>For occasional pampering</p>
+                    </div>
+                    <div class="pricing-price">₹1,999<span>/month</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>15% off all services</li>
+                            <li>1 free blowout per month</li>
+                            <li>Priority booking slots</li>
+                            <li>Members-only festival offers</li>
+                            <li>Product discounts (10%)</li>
+                            <li>Birthday special treatment</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Join Now</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card offer-highlight">
+                    <div class="popular-badge">Best Value</div>
+                    <div class="pricing-header">
+                        <h3>Bloom Premium</h3>
+                        <p>Most Popular Choice</p>
+                    </div>
+                    <div class="pricing-price">₹3,999<span>/month</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>25% off all services</li>
+                            <li>3 free services per month</li>
+                            <li>VIP booking privileges</li>
+                            <li>Free product samples monthly</li>
+                            <li>Product discounts (20%)</li>
+                            <li>Quarterly Ayurvedic treatment</li>
+                            <li>Festival gift hampers</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Join Now</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Bloom Family</h3>
+                        <p>For the entire family</p>
+                    </div>
+                    <div class="pricing-price">₹7,999<span>/month</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Up to 4 family members</li>
+                            <li>30% off all services</li>
+                            <li>6 free services per month</li>
+                            <li>Priority family booking</li>
+                            <li>Product discounts (25%)</li>
+                            <li>Birthday specials for all</li>
+                            <li>Annual family photo session</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="book.html" class="btn-primary">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="savings-calc">
+                <h3><i class="fas fa-calculator"></i> Calculate Your Savings</h3>
+                <p>Use our monthly membership and save significantly on your regular beauty treatments. The more you visit, the more you save!</p>
+                <div class="savings-amount">Save up to ₹25,000/year</div>
+                <p>With our Premium Membership, regular clients can save substantial amounts while enjoying priority services and exclusive benefits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Price List -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Price List</h2>
+                <p class="section-subtitle">Detailed pricing for all our premium services (All prices in INR)</p>
+            </div>
+            
+            <h3 class="category-title">Hair Services</h3>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Women's Precision Haircut</td>
+                        <td>Includes shampoo, cut, and luxury styling</td>
+                        <td class="price">₹1,200+</td>
+                    </tr>
+                    <tr>
+                        <td>Men's Grooming Haircut</td>
+                        <td>Precision cut with hot towel treatment</td>
+                        <td class="price">₹800+</td>
+                    </tr>
+                    <tr>
+                        <td>Ayurvedic Hair Treatment</td>
+                        <td>Traditional herbal treatment for hair growth</td>
+                        <td class="price">₹1,500</td>
+                    </tr>
+                    <tr>
+                        <td>Luxury Blowout & Styling</td>
+                        <td>Professional blow dry for special occasions</td>
+                        <td class="price">₹1,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Single Process Color</td>
+                        <td>Full coverage with ammonia-free formula</td>
+                        <td class="price">₹2,500+</td>
+                    </tr>
+                    <tr>
+                        <td>Balayage / Ombre</td>
+                        <td>Hand-painted highlighting technique</td>
+                        <td class="price">₹5,500+</td>
+                    </tr>
+                    <tr>
+                        <td>Traditional Head Massage</td>
+                        <td>Indian head massage with herbal oils</td>
+                        <td class="price">₹1,500</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 class="category-title">Spa & Wellness</h3>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Signature Facial</td>
+                        <td>Deep cleansing, exfoliation, and mask</td>
+                        <td class="price">₹2,200</td>
+                    </tr>
+                    <tr>
+                        <td>Ayurvedic Shirodhara</td>
+                        <td>Traditional therapy with warm herbal oil</td>
+                        <td class="price">₹3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Tissue Massage</td>
+                        <td>Therapeutic deep muscle massage</td>
+                        <td class="price">₹2,800</td>
+                    </tr>
+                    <tr>
+                        <td>Relaxation Massage</td>
+                        <td>Gentle strokes for stress relief</td>
+                        <td class="price">₹2,500</td>
+                    </tr>
+                    <tr>
+                        <td>Body Scrub & Polish</td>
+                        <td>Exfoliating treatment with natural scrubs</td>
+                        <td class="price">₹2,000</td>
+                    </tr>
+                    <tr>
+                        <td>Luxury Manicure</td>
+                        <td>Classic manicure with hand massage</td>
+                        <td class="price">₹900</td>
+                    </tr>
+                    <tr>
+                        <td>Luxury Pedicure</td>
+                        <td>Relaxing pedicure with foot massage</td>
+                        <td class="price">₹1,500</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 class="category-title">Makeup & Traditional</h3>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bridal Makeup Trial</td>
+                        <td>Consultation and trial run</td>
+                        <td class="price">₹3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Indian Bridal Makeup</td>
+                        <td>Traditional bridal with intricate detailing</td>
+                        <td class="price">₹12,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Special Occasion Makeup</td>
+                        <td>For parties, festivals, and events</td>
+                        <td class="price">₹2,500</td>
+                    </tr>
+                    <tr>
+                        <td>Mehndi Application</td>
+                        <td>Traditional henna for hands and feet</td>
+                        <td class="price">₹2,500+</td>
+                    </tr>
+                    <tr>
+                        <td>Threading & Eyebrow</td>
+                        <td>Traditional threading technique</td>
+                        <td class="price">₹300+</td>
+                    </tr>
+                    <tr>
+                        <td>Classic Straight Razor Shave</td>
+                        <td>Traditional shave with hot towels</td>
+                        <td class="price">₹1,200</td>
+                    </tr>
+                    <tr>
+                        <td>Beard Trim & Shape</td>
+                        <td>Precision beard grooming</td>
+                        <td class="price">₹800</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="book.html" class="btn" style="padding: 1.2rem 3rem; font-size: 1.2rem;">Book Appointment Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Luxe & Bloom</div>
+                    <p>Premium unisex salon blending Indian beauty heritage with global luxury standards. Experience the fusion of tradition and innovation.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 1.2rem;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Bandra West, Mumbai</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 8329492479</p>
+                    <p><i class="fas fa-envelope"></i> info@luxeandbloom.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8329492479</p>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p><span>Mon - Sat:</span> <span>9am - 9pm</span></p>
+                    <p><span>Sunday:</span> <span>10am - 7pm</span></p>
+                    <p><span>Festivals:</span> <span>Special Hours</span></p>
+                    <p><span>Bridal Appointments:</span> <span>24/7 Available</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+    <p>&copy; 2023 Luxe & Bloom Premium Salon. All rights reserved. | 
+        Designed with <i class="fas fa-heart" style="color: var(--primary-gold);"></i> by 
+        <a href="https://meraj8329.pythonanywhere.com/" target="_blank" style="color: var(--primary-gold); font-weight: 600; text-decoration: none;">meraj.dev</a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+ <div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item">
+        <i class="fas fa-spa"></i>
+        <span>Services</span>
+    </a>
+    
+    <a href="book.html" class="nav-item book-special">
+        <div class="inner-circle">
+            <i class="fas fa-calendar-check"></i>
+        </div>
+        <span>Book</span>
+    </a>
+
+    <a href="gallery.html" class="nav-item">
+        <i class="fas fa-images"></i>
+        <span>Gallery</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+    </a>
+</div>
+
+    <script src="script.js"></script>
+    <script src="mobile-nav.js"></script>
+    <script>
+        // Add animations on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effect to pricing cards
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            
+            pricingCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = this.classList.contains('offer-highlight') ? 
+                        'scale(1.05) translateY(-15px)' : 'translateY(-15px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = this.classList.contains('offer-highlight') ? 
+                        'scale(1.05)' : 'translateY(0)';
+                });
+            });
+            
+            // Animate table rows on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe table rows
+            document.querySelectorAll('.price-table tbody tr').forEach((row, index) => {
+                row.style.opacity = '0';
+                row.style.transform = 'translateX(20px)';
+                row.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                row.style.transitionDelay = (index * 0.1) + 's';
+                observer.observe(row);
+            });
+            
+            // Calculate savings dynamically
+            function calculateSavings() {
+                const premiumPrice = 3999;
+                const months = 12;
+                const avgMonthlySpend = 6000;
+                const discount = 0.25; // 25% discount
+                
+                const yearlyCostWithoutMembership = avgMonthlySpend * months;
+                const membershipCost = premiumPrice * months;
+                const discountedYearlyCost = (avgMonthlySpend * (1 - discount)) * months;
+                const totalWithMembership = membershipCost + discountedYearlyCost;
+                
+                const savings = yearlyCostWithoutMembership - totalWithMembership;
+                
+                // Update savings display
+                const savingsElement = document.querySelector('.savings-amount');
+                if (savingsElement) {
+                    savingsElement.textContent = `Save up to ₹${savings.toLocaleString('en-IN')}/year`;
+                }
+            }
+            
+            calculateSavings();
+        });
+    </script>
+</body>
+</html>

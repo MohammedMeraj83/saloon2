@@ -1,0 +1,615 @@
+  /* Additional styles for about page */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+
+        .page-header {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-attachment: fixed; /* This creates the parallax effect */
+    background-size: cover;
+    background-position: center;
+}
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            color: var(--light-gold);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .bg-light {
+            background-color: var(--primary-beige);
+        }
+        
+        .about-text {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-hover);
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-hover);
+        }
+        
+        .team-img {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            margin-bottom: 0.3rem;
+        }
+        
+        .team-role {
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .team-info p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--primary-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--primary-gold);
+            color: var(--white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+        }
+        
+        .feature-item h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item p {
+            color: var(--text-light);
+        }
+        
+        /* Founder Story Section */
+        .founder-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+        
+        .founder-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .founder-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .founder-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .founder-content h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .founder-quote {
+            font-style: italic;
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--primary-gold);
+        }
+        
+        .founder-signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-top: 2rem;
+        }
+        
+        .founder-title {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        /* Values Section */
+        .values-section {
+            padding: 5rem 0;
+            background-color: var(--primary-beige);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .value-item h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .founder-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 80px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    /* Header ko index.html jaisa transparent aur blur banane ke liye */
+header {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Page header (Hero section) ki spacing fix */
+.page-header {
+    padding: 12rem 0 6rem !important; /* Header ke piche text na dabe isliye padding badhayi hai */
+    background-attachment: fixed; /* Parallax effect ke liye */
+}
+
+.team-member {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.team-member img {
+    transition: transform 0.8s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-member:hover {
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--primary-gold);
+}
+
+.value-icon {
+    display: inline-block;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Header Fix for About Page */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Nav Menu ko line mein laane ke liye */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Links ke beech ki jagah */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #D4AF37; /* Gold color for active/hover */
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #D4AF37;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Mobile Button ko desktop par chhupane ke liye */
+.mobile-menu-btn {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive: Mobile ke liye fix */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Desktop menu chhupao */
+    }
+    .mobile-menu-btn {
+        display: block; /* Hamburger dikhao */
+    }
+}
+
+/* Cards ko default state mein thoda chhupao taaki animation smooth dikhe */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.team-card, .value-item, .founder-img, .founder-content {
+    will-change: transform, opacity;
+}
+
+/* Hover ke saath glow effect */
+.team-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+    border: 1px solid var(--primary-gold);
+}
+
+.values-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.value-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+}
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.founder-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 6rem 0;
+}
+.founder-img {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 20px 20px 0px var(--primary-gold); /* Gold accent behind photo */
+}
+.founder-text {
+    flex: 1;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Mobile par automatic niche bhej dega */
+    text-align: center;
+    gap: 2rem;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-number-wrapper {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--primary-gold);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .stats-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Stats Section ko White karne ke liye */
+.about-stats-container {
+    background: #ffffff !important; /* Pure White Background */
+    color: #333333 !important;    /* Dark Gray Text taaki white par dikhe */
+    padding: 5rem 0;
+    border-top: 1px solid #eeeeee; /* Optional: Halka border separation ke liye */
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Numbers (Gold color hamesha premium lagta hai) */
+.stat-number-wrapper {
+    color: #D4AF37 !important; /* Gold color numbers ke liye */
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* Labels (Years of Excellence, etc.) */
+.stat-label {
+    color: #555555 !important; /* Medium Gray labels ke liye */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    /* 1. Desktop menu ko force hide karo taaki width bahar na jaye */
+    .nav-menu, .desktop-nav {
+        display: none !important;
+    }
+
+    /* 2. Logo aur Header container ko align karo */
+    .navbar, .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        overflow: hidden; /* Bahar jane wala content block karega */
+    }
+
+    .logo {
+        max-width: 70%; /* Logo ko screen ke bahar jane se rokega */
+        font-size: 1.2rem !important;
+    }
+
+    /* 3. Hero section ka text jo cut raha hai */
+    .hero-content h1, .page-header h1 {
+        font-size: 2rem !important;
+        word-wrap: break-word;
+    }
+}
